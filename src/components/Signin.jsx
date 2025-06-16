@@ -26,7 +26,7 @@ function Signin({ onSignIn }) {
           <input
             type="email"
             placeholder="Email"
-            className="p-2 border rounded text-2xl"
+            className="p-2 border rounded"
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
@@ -35,13 +35,13 @@ function Signin({ onSignIn }) {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Password"
-              className="p-2 border rounded w-full pr-10 text-2xl"
+              className="p-2 border rounded w-full pr-10"
               value={password}
               onChange={e => setPassword(e.target.value)}
               required
             />
             <span
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-black text-2xl"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-black"
               onClick={() => setShowPassword((prev) => !prev)}
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
