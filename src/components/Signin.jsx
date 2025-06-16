@@ -26,7 +26,7 @@ function Signin({ onSignIn }) {
           <input
             type="email"
             placeholder="Email"
-            className="p-4 border rounded text-2xl"
+            className="p-2 border rounded text-2xl"
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
@@ -35,7 +35,7 @@ function Signin({ onSignIn }) {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Password"
-              className="p-4 border rounded w-full pr-10 text-2xl"
+              className="p-2 border rounded w-full pr-10 text-2xl"
               value={password}
               onChange={e => setPassword(e.target.value)}
               required
