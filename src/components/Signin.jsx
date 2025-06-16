@@ -16,7 +16,7 @@ function Signin({ onSignIn }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center md:min-h-screen min-h-[80vh]">
+    <div className="flex flex-col items-center justify-center min-h-[80vh]">
       <div className="rounded-lg shadow-lg p-8 sm:w-full  w-[80%] max-w-lg">
         <h2 className="text-3xl font-bold mb-6 text-center text-purple-700">Sign In</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
