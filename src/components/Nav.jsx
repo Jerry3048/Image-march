@@ -4,7 +4,7 @@ function Nav() {
       <div className="container mx-auto flex justify-end">
         <ul className="flex space-x-6">
           <li>
-            <a href="/login" className="text-white hover:text-gray-300 ">Log out</a>
+            <a href="/login" className="text-white hover:text-gray-300 text-2xl">Log out</a>
           </li>
         </ul>
       </div>

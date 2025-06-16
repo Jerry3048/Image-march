@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Signin from "./components/Signin";
-import Nav from "./components/Nav";
-import Logo from "./components/logo";
-import Imagelink from "./components/Imagelink";
-import Facerecognition from "./components/Facerecognition";
-import Rank from "./components/Rank";
-import Design from "./components/Design";
+import Signin from "./components/Signin.jsx";
+import Nav from "./components/Nav.jsx";
+import Logo from "./components/Logo.jsx";
+import Imagelink from "./components/Imagelink.jsx";
+import Facerecognition from "./components/Facerecognition.jsx";
+import Rank from "./components/Rank.jsx";
+import Design from "./components/Design.jsx";
 
 function App() {
   const [imageUrl, setImageUrl] = useState("");
