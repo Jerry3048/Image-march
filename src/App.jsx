@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Signin from "./components/Signin.jsx";
 import Nav from "./components/Nav.jsx";
 import Logo from "./components/Logo.jsx";
@@ -17,24 +18,39 @@ function App() {
 
   return (
     <div className="relative min-h-screen h-screen overflow-hidden bg-gradient-to-r from-fuchsia-600 to-blue-500 text-white">
-  
       <div className="absolute inset-0 z-0">
         <Design />
       </div>
-
       <div className="relative z-10 ">
-    <Nav />
-    <Logo />
-
-        {!isSignedIn ? (
-          <Signin onSignIn={() => setIsSignedIn(true)} />
-        ) : (
-          <div>
-            <Rank />
-            <Imagelink onSubmit={handleImageSubmit} />
-            <Facerecognition imageUrl={imageUrl} />
-          </div>
-        )}
+        {isSignedIn && <Nav  onLogout={() => setIsSignedIn(false)} />}
+        <Logo />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              isSignedIn ? (
+                <Navigate to="/home" />
+              ) : (
+                <Signin onSignIn={() => setIsSignedIn(true)} />
+              )
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              isSignedIn ? (
+                <div>
+                  <Rank />
+                  <Imagelink onSubmit={handleImageSubmit} />
+                  <Facerecognition imageUrl={imageUrl} />
+                </div>
+              ) : (
+                <Navigate to="/" />
+              )
+            }
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </div>
     </div>
   );
