@@ -42,8 +42,9 @@ function Facerecognition({ imageUrl }) {
         setBoxes(regions.map(region => region.region_info.bounding_box));
         console.log('Boxes:', regions.map(region => region.region_info.bounding_box));
         console.log('Result:', result);
+        console.log(regions)
       })
-      .catch(error => console.log('error', error));
+      .catch(error => console.log('error', error)); 
   }, [imageUrl]);
 
   return (
@@ -54,14 +55,14 @@ function Facerecognition({ imageUrl }) {
             src={imageUrl}
             alt="Detected" 
             id="inputImage"
-            className="h-[300px] w-[250px] sm:w-[400px] rounded shadow"
+            className="sm:h-[300px] h-[270px] w-[250px] sm:w-[400px] rounded shadow"
           />
           {boxes.map((box, i) => (
             <div
               key={i}
               style={{
                 position: "absolute",
-                border: "2px solid #00FF00",
+                border: "4px solid #3674B5",
                 left: `${box.left_col * 100}%`,
                 top: `${box.top_row * 100}%`,
                 width: `${(box.right_col - box.left_col) * 100}%`,
