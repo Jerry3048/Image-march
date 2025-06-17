@@ -23,6 +23,8 @@ function Signin({ onSignIn }) {
     } else {
       alert("Please enter email and password.");
     }
+    setEmail("");
+    setPassword("");
   };
 
   return (

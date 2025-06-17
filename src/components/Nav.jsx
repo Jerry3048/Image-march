@@ -16,5 +16,6 @@ function Nav({ onLogout }) {
       </div>
     </nav>
   );
+  );
 }
 export default Nav;

@@ -9,7 +9,7 @@ const Imagelink = ({ onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (onSubmit) {
-      onSubmit(input) // send input URL to parent
+      onSubmit(input) 
     }
     setInput('')
   }
@@ -29,7 +29,7 @@ const Imagelink = ({ onSubmit }) => {
         />
         <button
           type="submit"
-          className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-400 transition"
+          className="bg-purple-600 text-white md:px-4 px-2 py-2 rounded hover:bg-purple-400 transition"
         >
           Detect
         </button>
